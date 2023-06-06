@@ -1,0 +1,97 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: rgb(40, 42, 147);
+position: relative;
+}
+
+
+
+div.carouselObject{
+    width: 65%;
+    max-width: 600px;
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(198, 91, 91);
+    color: rgb(185, 185, 185);
+    
+    
+
+}
+
+.slide{
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.slide > img{
+    height: calc(100% - 4rem);
+    
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.title, .text{
+    padding-top: 1.5rem;
+}
+.text{
+    padding: 2rem;
+    font-size: .8rem;
+}
+ 
+div.preview, div.next{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
+background-color: rgb(182, 6, 6);
+    font-size: 30px;
+    cursor:pointer;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+div.next{
+    right:20% ;
+    padding-bottom: 5px;
+}
+
+div.preview{
+    left:20% ;
+}
+div.thumbnails{
+    display: flex;
+    height: 150px;
+   border: 1px solid red;
+  
+}
+
+div.thumbnails img{
+    filter: brightness(60%);
+}
+
+div.thumbnail img.growImage{
+    filter: brightness(150%);
+    
+    
+    
+}
+
+
+
+
+

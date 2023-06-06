@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VUE-SLIDER</title>
+</head>
+<body>
+    <script src = "https://unpkg.com/vue@3">
+    </script>
+    <div id="app"> 
+        <main>
+            <div class="carouselObject">
+                <div class="slide">
+                    <img  :src=  "images[activeIndex].image" alt="image">
+                    <div class="thumbnails " >
+                        <div class="thumbnail" v-for = "(element, index) in images"  @click = "growThumbnail()">
+                            <img :src="element.image" alt="thumbnails'image"  >
+    
+                        </div>
+                    </div>
+                    <h2 class="title ">
+                        {{ images[activeIndex].title }}
+                    </h2>
+                    <p class="text">
+                        {{images[activeIndex] .text }}
+                    </p>
+                    
+                </div>
+                <div class="next" @click = "nextButton()">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="preview" @click = "previewButton()">
+                    <i class="fa-solid fa-angle-left"></i>
+                   
+                </div>
+
+            </div>
+        </main>
+       
+    </div>
+
+
+
+   
+    <script src="./js/vue.js">
+
+    </script>
+</body>
+</html>
